@@ -10,6 +10,7 @@ resources:
   containers:
   - container: my_container
     image: phusion/passenger-ruby26
+    user: root
   - container: postgres
     image: postgres:10
 
