@@ -9,7 +9,7 @@ trigger:
 resources:
   containers:
   - container: my_container
-    image: ubuntu:16.04
+    image: phusion/passenger-ruby26
   - container: postgres
     image: postgres:10
 
@@ -22,9 +22,6 @@ pool:
 container: my_container
 
 steps:
-- task: UseRubyVersion@0
-  inputs:
-    versionSpec: '>= 2.6'
 
 - script: |
     gem install bundler
