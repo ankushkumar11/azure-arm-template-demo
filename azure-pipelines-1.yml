@@ -24,11 +24,8 @@ container: my_container
 steps:
 
 - script: |
-    gem install bundler
-    apt update
     apt install -y postgresql-client
     psql --host=postgres --username=postgres --command="SELECT 1;"
-    bundle install --retry=3 --jobs=4
   displayName: 'bundle install'
 
 - script: bundle exec rake
