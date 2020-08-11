@@ -8,6 +8,8 @@ trigger:
 
 resources:
   containers:
+  - container: my_container
+    image: ubuntu:16.04
   - container: postgres
     image: postgres:10
 
@@ -16,6 +18,8 @@ services:
 
 pool:
   vmImage: 'ubuntu-latest'
+
+container: my_container
 
 steps:
 - task: UseRubyVersion@0
