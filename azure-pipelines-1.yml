@@ -25,8 +25,8 @@ steps:
 
 - script: |
     gem install bundler
-    sudo apt update
-    sudo apt install -y postgresql-client
+    apt update
+    apt install -y postgresql-client
     psql --host=postgres --username=postgres --command="SELECT 1;"
     bundle install --retry=3 --jobs=4
   displayName: 'bundle install'
